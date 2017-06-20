@@ -7,7 +7,7 @@ public class GameLevelZ extends GameLevel {
 	@Override
 	protected void setContents() {
 
-		// Cargo el héroe.
+		// Cargo el heroe.
 		addHero(1,0,0);
 				
 		// add walls
