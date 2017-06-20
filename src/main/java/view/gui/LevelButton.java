@@ -1,15 +1,12 @@
 package view.gui;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.FontFormatException;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import javax.swing.JButton;
 
 public class LevelButton extends JButton {
 
@@ -21,7 +18,7 @@ public class LevelButton extends JButton {
         setContentAreaFilled(false);
         setOpaque(false);
         setFocusPainted(false);
-		setBounds(205, 240, 100, 50);
+		setBounds(185, 240, 150, 50);
 		setText("Niveles");
 		
 		try {

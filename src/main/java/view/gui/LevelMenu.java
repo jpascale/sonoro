@@ -1,26 +1,19 @@
 package view.gui;
 
-import java.awt.Dimension;
-import java.awt.Image;
-import java.awt.Toolkit;
+import model.Game;
+import model.board.level.GameLevelY;
+import model.board.level.GameLevelZ;
+import sound.OggClip;
+import view.Main;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
-import model.Game;
-import model.board.level.GameLevelY;
-import model.board.level.GameLevelZ;
-
-import sound.OggClip;
-import view.Main;
 
 
 public class LevelMenu extends JFrame {
@@ -50,7 +43,7 @@ public class LevelMenu extends JFrame {
 		}
 	    
 	    LevelButtons lb1 = new LevelButtons("1");
-	    lb1.setBounds(205, 180, 100, 50);
+		lb1.setBounds(185, 170, 150, 50);
 	    
 	    
 	    lb1.addMouseListener(new MouseAdapter() { 
@@ -70,7 +63,7 @@ public class LevelMenu extends JFrame {
 	    
 	    
 	    LevelButtons lb2 = new LevelButtons("2");
-	    lb2.setBounds(205, 240, 100, 50);
+		lb2.setBounds(185, 220, 150, 50);
 	    
 	    
 	    lb2.addMouseListener(new MouseAdapter() { 
@@ -87,8 +80,23 @@ public class LevelMenu extends JFrame {
 	      		  
 	          }
 	    });
-	    
-	    
+
+        LevelButtons lb3 = new LevelButtons("3");
+        lb3.setBounds(185, 270, 150, 50);
+        lb3.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent me) {
+                LevelMenu.this.setVisible(false);
+                LevelMenu.this.ogg.stop();
+                try {
+                    Main mainWindow = new Main(new Game(GameLevelZ.class));
+                    mainWindow.setVisible(true);
+                } catch (InstantiationException | IllegalAccessException e) {
+                    JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
+        add(lb3);
 	    add(lb1);
 	    add(lb2);
 	    

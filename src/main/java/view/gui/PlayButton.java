@@ -1,15 +1,11 @@
 package view.gui;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.FontFormatException;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import javax.swing.JButton;
-import javax.swing.JOptionPane;
 
 public class PlayButton extends JButton {
 
@@ -21,7 +17,7 @@ public class PlayButton extends JButton {
         setContentAreaFilled(false);
         setOpaque(false);
         setFocusPainted(false);
-		setBounds(205, 180, 100, 50);
+		setBounds(185, 180, 150, 50);
 		setText("Jugar");
 		
 		
