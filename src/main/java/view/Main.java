@@ -2,14 +2,13 @@ package view;
 
 import model.Game;
 import model.board.Move;
-import sound.OggClip;
+import sound.FX;
+import sound.SoundMaker;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.io.FileInputStream;
-import java.io.IOException;
 
 public class Main extends JFrame {
 	
@@ -17,7 +16,7 @@ public class Main extends JFrame {
 	
 	private Game game;
 	private MainPanel mainPanel;
-	private OggClip ogg;
+	// private OggClip ogg;
 	
 	public Main(Game game) {
 		super("My Desktop Dungeon");
@@ -33,13 +32,11 @@ public class Main extends JFrame {
 	    this.setLocation(size.width/2 - getWidth()/2, size.height/2 - getHeight()/2);
 	    
 	    this.setIconImage(mainPanel.getImageManager().get("ICON"));
-	    
-	    try {
-			this.ogg = new OggClip(new FileInputStream("resources/map.ogg"));
-			this.ogg.loop();
-		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Error al cargar audio", "Error", JOptionPane.ERROR_MESSAGE);
-		}
+
+		SoundMaker.getInstance().music(FX.MUSIC);
+			// ogg = new OggClip(new FileInputStream("resources/map.ogg"));
+			// ogg.loop();
+
 	    
 	    addKeyListener(new KeyAdapter() {
 			public void keyPressed(KeyEvent e) {

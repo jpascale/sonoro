@@ -1,11 +1,10 @@
 package view.gui;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
+import sound.FX;
+import sound.SoundMaker;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.*;
+import java.awt.*;
 
 public class GameOver extends JFrame {
 
@@ -24,5 +23,7 @@ public class GameOver extends JFrame {
 	    setContentPane(new JLabel(new ImageIcon("resources/gameover.png")));
 	    
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        SoundMaker.getInstance().stopMusic();
+        SoundMaker.getInstance().effect(FX.LOSE);
 	}
 }
