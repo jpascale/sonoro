@@ -27,8 +27,8 @@ public class Goblin implements Fighter, Actionable {
 
 	@Override
 	public Content interact(Fighter hero) {
-		injured(hero.getStrength());
 		SoundMaker.getInstance().effect(FX.STAB);
+		injured(hero.getStrength());
 		hero.injured(getStrength());
 
 		FighterHero fg = (FighterHero) hero;
