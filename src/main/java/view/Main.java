@@ -2,6 +2,8 @@ package view;
 
 import model.Game;
 import model.board.Move;
+import sound.FX;
+import sound.SoundMaker;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,10 +30,10 @@ public class Main extends JFrame {
 	    this.setContentPane(mainPanel = new MainPanel(game));
 	    this.setSize(mainPanel.getWidth(), mainPanel.getHeight() + 40);
 	    this.setLocation(size.width/2 - getWidth()/2, size.height/2 - getHeight()/2);
-	    
+
 	    this.setIconImage(mainPanel.getImageManager().get("ICON"));
 
-//		SoundMaker.getInstance().music(FX.MUSIC);
+		SoundMaker.getInstance().music(FX.MUSIC);
 			// ogg = new OggClip(new FileInputStream("resources/map.ogg"));
 			// ogg.loop();
 

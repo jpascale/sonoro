@@ -44,24 +44,6 @@ public class SoundMaker {
 
     }
 
-    public void step() {
-        try {
-            if (booleanStep) {
-                this.step = new OggClip(new FileInputStream(String.valueOf(FX.STEP_RIGHT)));
-                this.step.setGain(1f);
-            } else {
-                this.step = new OggClip(new FileInputStream(String.valueOf(FX.STEP_LEFT)));
-                this.step.setGain(1f);
-            }
-            booleanStep = !booleanStep;
-            this.step.play();
-        } catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Error al cargar audio", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-
-    }
-
     public void stopMusic(){
         if (this.music != null)
             this.music.stop();

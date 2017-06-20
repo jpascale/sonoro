@@ -1,17 +1,14 @@
 package view.panel;
 
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.Graphics;
-import javax.swing.JPanel;
-
 import model.Game;
 import model.board.Content;
 import model.fighter.Fighter;
 import view.ImageManager;
 import view.gui.GameOver;
 import view.gui.PlayerWin;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class InfoPanel extends JPanel implements GamePanelListener {
 	private static final long serialVersionUID = 1L;
@@ -20,6 +17,7 @@ public class InfoPanel extends JPanel implements GamePanelListener {
 	private FighterPanel enemyPanel;
 	private ElementPanel elementPanel;
 	private Game game;
+	private boolean gameFinished = false;
 	
 	public InfoPanel(Game game, ImageManager imgManager, int width, int height) {
 		this.game = game;
@@ -49,13 +47,16 @@ public class InfoPanel extends JPanel implements GamePanelListener {
 		if (game.isOver()) {
 			Font plain = new Font("Arial", Font.BOLD, 12);
 			g.setFont(plain);
-			if (game.playerWon()) {
-				PlayerWin pw = new PlayerWin();
-				pw.setVisible(true);
-			} else {
-				GameOver go = new GameOver();
-				go.setVisible(true);
-			}
+            if (!gameFinished) {
+                gameFinished = true;
+                if (game.playerWon()) {
+                    PlayerWin pw = new PlayerWin();
+                    pw.setVisible(true);
+                } else {
+                    GameOver go = new GameOver();
+                    go.setVisible(true);
+                }
+            }
 		}
 	}
 	

@@ -3,7 +3,9 @@ package view.gui;
 import model.Game;
 import model.board.level.GameLevelY;
 import model.board.level.GameLevelZ;
+import sound.FX;
 import sound.OggClip;
+import sound.SoundMaker;
 import view.Main;
 
 import javax.imageio.ImageIO;
@@ -52,6 +54,7 @@ public class LevelMenu extends JFrame {
 	        	  LevelMenu.this.ogg.stop();
 	        	  
 	        	  try {
+                      SoundMaker.getInstance().effect(FX.CLICK);
 	        		  Main mainWindow = new Main(new Game(GameLevelY.class));
 	        		  mainWindow.setVisible(true);
 	        	  } catch (InstantiationException | IllegalAccessException e) {
@@ -72,6 +75,7 @@ public class LevelMenu extends JFrame {
 	        	  LevelMenu.this.ogg.stop();
 	        	  
 	        	  try {
+                      SoundMaker.getInstance().effect(FX.CLICK);
 	        		  Main mainWindow = new Main(new Game(GameLevelZ.class));
 	        		  mainWindow.setVisible(true);
 	        	  } catch (InstantiationException | IllegalAccessException e) {
@@ -88,6 +92,7 @@ public class LevelMenu extends JFrame {
                 LevelMenu.this.setVisible(false);
                 LevelMenu.this.ogg.stop();
                 try {
+                    SoundMaker.getInstance().effect(FX.CLICK);
                     Main mainWindow = new Main(new Game(GameLevelZ.class));
                     mainWindow.setVisible(true);
                 } catch (InstantiationException | IllegalAccessException e) {

@@ -2,7 +2,6 @@ package model.board;
 
 import model.fighter.Fighter;
 import model.fighter.Hero;
-import sound.SoundMaker;
 
 import java.awt.*;
 import java.util.HashSet;
@@ -55,7 +54,6 @@ public abstract class Board {
 					g[heroPosition.y][heroPosition.x].removeContent();
 
 					if (newPosition != heroPosition) {
-                        SoundMaker.getInstance().step();
 						alertMove();
 					}
 
