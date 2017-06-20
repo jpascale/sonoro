@@ -4,6 +4,8 @@ import model.board.Content;
 import model.fighter.Fighter;
 import model.fighter.FighterHero;
 import model.fighter.SwordHero;
+import sound.FX;
+import sound.SoundMaker;
 
 public class Sword extends Bonus implements Content {
 
@@ -26,6 +28,7 @@ public class Sword extends Bonus implements Content {
 	@Override
 	public Content interact(Fighter hero) {
 		FighterHero fg = (FighterHero) hero;
+		SoundMaker.getInstance().effect(FX.USE_SWORD);
 		return new SwordHero(fg, this);
 	}
 	

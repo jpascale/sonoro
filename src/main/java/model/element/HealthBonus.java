@@ -2,6 +2,8 @@ package model.element;
 
 import model.board.Content;
 import model.fighter.Fighter;
+import sound.FX;
+import sound.SoundMaker;
 
 public class HealthBonus extends Bonus implements Content {
 
@@ -20,6 +22,7 @@ public class HealthBonus extends Bonus implements Content {
 	@Override
 	public Content interact(Fighter hero) {
 		hero.heal(value);
+		SoundMaker.getInstance().effect(FX.HEALTH);
 		return null;
 	}
 

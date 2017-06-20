@@ -1,11 +1,11 @@
 package model.board;
 
-import java.awt.Point;
-import java.util.HashSet;
-import java.util.Set;
-
 import model.fighter.Fighter;
 import model.fighter.Hero;
+
+import java.awt.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class Board {
 
@@ -33,7 +33,7 @@ public abstract class Board {
 	}
 
 	public void heroMove(Move move) {
-		if (getHero().isAlive()) {
+		if (getHero().isAlive() && !gameOver()) {
 
 			if (heroPosition.x + move.getX() > heroPosition.x)
 				getHero().setMovementState("down");

@@ -1,11 +1,12 @@
 package model;
 
-import java.awt.Point;
-
 import model.board.Board;
 import model.board.Cell;
 import model.board.Move;
 import model.fighter.Hero;
+import sound.SoundMaker;
+
+import java.awt.*;
 
 public class Game {
 	
@@ -17,6 +18,7 @@ public class Game {
 	
 	public void onMove(Move move) {
 		board.heroMove(move);
+		SoundMaker.getInstance().step();
 	}
 	
 	public int getBoardSize() {

@@ -1,23 +1,9 @@
 package model.board.level;
 
 import model.board.Board;
-import model.element.AttackBonus;
-import model.element.HealthBonus;
-import model.element.HealthPotion;
-import model.element.Shield;
-import model.element.Sword;
-import model.element.Wall;
-import model.fighter.FighterHero;
-import model.fighter.FighterHeroImpl;
-import model.fighter.Goblin;
-import model.fighter.Golem;
-import model.fighter.Hero;
-import model.fighter.Serpent;
-import model.fighter.level.GoblinLevel;
-import model.fighter.level.GolemLevel;
-import model.fighter.level.HeroLevel;
-import model.fighter.level.Level;
-import model.fighter.level.SerpentLevel;
+import model.element.*;
+import model.fighter.*;
+import model.fighter.level.*;
 
 public abstract class GameLevel extends Board {
 	
@@ -117,5 +103,6 @@ public abstract class GameLevel extends Board {
 	public boolean playerWon() {
 		return getHero().isAlive();
 	}
+
 
 }

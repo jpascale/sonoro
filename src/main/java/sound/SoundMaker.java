@@ -9,6 +9,8 @@ public class SoundMaker {
     private static SoundMaker instance = null;
     private OggClip music;
     private OggClip effect;
+    private OggClip step;
+    private boolean booleanStep;
 
     private SoundMaker(){
 
@@ -23,6 +25,7 @@ public class SoundMaker {
     }
 
     public void effect(FX effect){
+        System.out.println(String.valueOf(effect));
         try {
             this.effect = new OggClip(new FileInputStream(String.valueOf(effect)));
         } catch (Exception e) {
@@ -41,8 +44,27 @@ public class SoundMaker {
 
     }
 
+    public void step() {
+        try {
+            if (booleanStep) {
+                this.step = new OggClip(new FileInputStream(String.valueOf(FX.STEP_RIGHT)));
+                this.step.setGain(1f);
+            } else {
+                this.step = new OggClip(new FileInputStream(String.valueOf(FX.STEP_LEFT)));
+                this.step.setGain(1f);
+            }
+            booleanStep = !booleanStep;
+            this.step.play();
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error al cargar audio", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }
+
     public void stopMusic(){
-        this.music.stop();
+        if (this.music != null)
+            this.music.stop();
     }
 
 

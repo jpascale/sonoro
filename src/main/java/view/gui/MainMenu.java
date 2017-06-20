@@ -1,26 +1,20 @@
 package view.gui;
 
-import java.awt.Dimension;
-import java.awt.Image;
-import java.awt.Toolkit;
+import model.Game;
+import model.board.level.GameLevelX;
+import sound.FX;
+import sound.OggClip;
+import sound.SoundMaker;
+import view.Main;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
-import model.Game;
-import model.board.level.GameLevelX;
-
-import sound.OggClip;
-
-import view.Main;
 
 public class MainMenu extends JFrame {
 
@@ -56,6 +50,7 @@ public class MainMenu extends JFrame {
 	    playButton.addMouseListener(new MouseAdapter() { 
 	          public void mousePressed(MouseEvent me) { 
 	        	  MainMenu.this.setVisible(false);
+				  SoundMaker.getInstance().effect(FX.CLICK);
 	        	  MainMenu.this.ogg.stop();
 	        	  
 	        	  try {
@@ -73,6 +68,7 @@ public class MainMenu extends JFrame {
 	    levelButton.addMouseListener(new MouseAdapter() { 
 	          public void mousePressed(MouseEvent me) { 
 	        	  MainMenu.this.setVisible(false);
+				  SoundMaker.getInstance().effect(FX.CLICK);
 	        	  MainMenu.this.ogg.stop();
 	        	  
 	        	  LevelMenu levelWindow = new LevelMenu();

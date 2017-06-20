@@ -2,8 +2,6 @@ package view;
 
 import model.Game;
 import model.board.Move;
-import sound.FX;
-import sound.SoundMaker;
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,7 +31,7 @@ public class Main extends JFrame {
 	    
 	    this.setIconImage(mainPanel.getImageManager().get("ICON"));
 
-		SoundMaker.getInstance().music(FX.MUSIC);
+//		SoundMaker.getInstance().music(FX.MUSIC);
 			// ogg = new OggClip(new FileInputStream("resources/map.ogg"));
 			// ogg.loop();
 

@@ -4,6 +4,8 @@ import model.board.Content;
 import model.board.Actionable;
 import model.element.Blood;
 import model.fighter.level.Level;
+import sound.FX;
+import sound.SoundMaker;
 
 public class Goblin implements Fighter, Actionable {
 
@@ -26,12 +28,14 @@ public class Goblin implements Fighter, Actionable {
 	@Override
 	public Content interact(Fighter hero) {
 		injured(hero.getStrength());
+		SoundMaker.getInstance().effect(FX.STAB);
 		hero.injured(getStrength());
 
 		FighterHero fg = (FighterHero) hero;
 
 		if (!isAlive()) {
 			fg.addExperience(level.getValue());
+			SoundMaker.getInstance().effect(FX.DEATH);
 			return new Blood();
 		}
 

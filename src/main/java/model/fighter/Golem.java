@@ -3,6 +3,8 @@ package model.fighter;
 import model.board.Content;
 import model.element.Sword;
 import model.fighter.level.Level;
+import sound.FX;
+import sound.SoundMaker;
 
 public class Golem implements Fighter {
 
@@ -22,12 +24,14 @@ public class Golem implements Fighter {
 	@Override
 	public Content interact(Fighter hero) {
 		injured(hero.getStrength());
+		SoundMaker.getInstance().effect(FX.STAB);
 		hero.injured(getStrength());
 
 		FighterHero fg = (FighterHero) hero;
 				
 		if (!isAlive()) {
 			fg.addExperience(level.getValue());
+			SoundMaker.getInstance().effect(FX.DEATH);
 			return new Sword(level.getValue());
 		}
 
