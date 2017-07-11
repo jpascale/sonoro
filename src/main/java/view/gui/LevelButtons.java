@@ -26,7 +26,7 @@ public class LevelButtons extends JButton {
 		try {
 			InputStream is = new FileInputStream("resources/goticaBastard.ttf");
 			Font GoticaBastard = Font.createFont(Font.TRUETYPE_FONT, is);
-			GoticaBastard = GoticaBastard.deriveFont(32f);
+			GoticaBastard = GoticaBastard.deriveFont(22f);
 			setForeground(Color.WHITE);
 		    setFont(GoticaBastard);
 			

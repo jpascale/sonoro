@@ -1,5 +1,6 @@
 package view.gui;
 
+import model.Game;
 import sound.FX;
 import sound.SoundMaker;
 
@@ -11,7 +12,7 @@ public class GameOver extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 
-	public GameOver(){
+	public GameOver(Game game){
 		super("Game Over");
 	    Toolkit toolkit = getToolkit();
 	    Dimension size = toolkit.getScreenSize();

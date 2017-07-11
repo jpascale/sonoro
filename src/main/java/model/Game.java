@@ -10,9 +10,11 @@ import java.awt.*;
 public class Game {
 	
 	private Board board;
+	public int level;
 	
-	public <T> Game(Class<T> boardClass) throws InstantiationException, IllegalAccessException {
+	public <T> Game(Class<T> boardClass, int level) throws InstantiationException, IllegalAccessException {
 		this.board = (Board)boardClass.newInstance();
+		this.level = level;
 	}
 	
 	public void onMove(Move move) {

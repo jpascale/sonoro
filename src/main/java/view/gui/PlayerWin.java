@@ -1,17 +1,23 @@
 package view.gui;
 
+import model.Game;
+import model.board.level.*;
+import oracle.jrockit.jfr.JFR;
 import sound.FX;
 import sound.SoundMaker;
+import view.Main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class PlayerWin extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 
 
-	public PlayerWin(){
+	public PlayerWin(Game game) throws IllegalAccessException, InstantiationException {
 		super("Player Win");
 	    Toolkit toolkit = getToolkit();
 	    Dimension size = toolkit.getScreenSize();
@@ -20,9 +26,57 @@ public class PlayerWin extends JFrame {
 	    this.setResizable(false);
 	    
 	    setContentPane(new JLabel(new ImageIcon("resources/playerwin.png")));
-	    
-	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		this.addWindowListener(new WindowAdapter()
+		{
+			@Override
+			public void windowClosing(WindowEvent e)
+			{
+
+				Main mainWindow = null;
+				try {
+
+					if(game.level == 1 ) {
+
+						mainWindow = new Main(new Game(GameLevelY.class,2));
+					}
+					if(game.level  == 2 ) {
+						mainWindow = new Main(new Game(GameLevelZ.class,3));
+					}
+					if(game.level == 3 ) {
+						mainWindow = new Main(new Game(GameLevel4.class,4));
+					}
+					if(game.level  == 4 ) {
+						mainWindow = new Main(new Game(GameLevel5.class,5));
+					}
+					if(game.level  == 5 ) {
+						mainWindow = new Main(new Game(GameLevel6.class,6));
+					}
+					if(game.level  == 6 ) {
+						mainWindow = new Main(new Game(GameLevel7.class,7));
+					}
+					if(game.level  == 7 ) {
+						mainWindow = new Main(new Game(GameLevel8.class,8));
+					}
+					if(game.level == 8 ) {
+						mainWindow = new Main(new Game(GameLevel9.class,9));
+					}
+					if(game.level == 9 ) {
+						mainWindow = new Main(new Game(GameLevel10.class,10));
+					}
+				} catch (InstantiationException e1) {
+					e1.printStackTrace();
+				} catch (IllegalAccessException e1) {
+					e1.printStackTrace();
+				}
+				mainWindow.setVisible(true);
+			}
+		});
+
+
 		SoundMaker.getInstance().stopMusic();
 		SoundMaker.getInstance().effect(FX.WIN);
 	}
+
+
 }

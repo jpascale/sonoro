@@ -50,10 +50,17 @@ public class InfoPanel extends JPanel implements GamePanelListener {
             if (!gameFinished) {
                 gameFinished = true;
                 if (game.playerWon()) {
-                    PlayerWin pw = new PlayerWin();
-                    pw.setVisible(true);
+					PlayerWin pw = null;
+					try {
+						pw = new PlayerWin(game);
+					} catch (IllegalAccessException e) {
+						e.printStackTrace();
+					} catch (InstantiationException e) {
+						e.printStackTrace();
+					}
+					pw.setVisible(true);
                 } else {
-                    GameOver go = new GameOver();
+                    GameOver go = new GameOver(game);
                     go.setVisible(true);
                 }
             }
