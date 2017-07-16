@@ -60,6 +60,7 @@ view/gui/MainMenu.class
 view/gui/LevelMenu$1.class
 view/gui/LevelMenu$10.class
 model/element/Blood.class
+view/gui/GameOver$1.class
 model/element/Bonus.class
 model/fighter/FighterHeroImpl.class
 sound/FX.class

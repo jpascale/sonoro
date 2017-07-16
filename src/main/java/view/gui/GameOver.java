@@ -6,6 +6,8 @@ import sound.SoundMaker;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class GameOver extends JFrame {
 
@@ -26,5 +28,17 @@ public class GameOver extends JFrame {
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         SoundMaker.getInstance().stopMusic();
         SoundMaker.getInstance().effect(FX.LOSE);
+
+		this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                try {
+                    Process proc = Runtime.getRuntime().exec("java -jar game.jar");
+                } catch (Exception ex){
+                    ex.printStackTrace();
+                }
+                return;
+            }
+		});
 	}
 }

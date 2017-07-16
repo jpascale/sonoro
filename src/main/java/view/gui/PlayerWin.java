@@ -35,33 +35,41 @@ public class PlayerWin extends JFrame {
 				Main mainWindow = null;
 				try {
 
-					if(game.level == 1 ) {
-
+					if (game.level == 1 ) {
 						mainWindow = new Main(new Game(GameLevelY.class,2), "Level 2");
 					}
-					if(game.level  == 2 ) {
+					if (game.level  == 2 ) {
 						mainWindow = new Main(new Game(GameLevelZ.class,3), "Level 3");
 					}
-					if(game.level == 3 ) {
+					if (game.level == 3 ) {
 						mainWindow = new Main(new Game(GameLevel4.class,4), "Level 4");
 					}
-					if(game.level  == 4 ) {
+					if (game.level  == 4 ) {
 						mainWindow = new Main(new Game(GameLevel5.class,5), "Level 5");
 					}
-					if(game.level  == 5 ) {
+					if (game.level  == 5 ) {
 						mainWindow = new Main(new Game(GameLevel6.class,6), "Level 6");
 					}
-					if(game.level  == 6 ) {
+					if (game.level  == 6 ) {
 						mainWindow = new Main(new Game(GameLevel7.class,7), "Level 7");
 					}
-					if(game.level  == 7 ) {
+					if (game.level  == 7 ) {
 						mainWindow = new Main(new Game(GameLevel8.class,8), "Level 8");
 					}
-					if(game.level == 8 ) {
+					if (game.level == 8 ) {
 						mainWindow = new Main(new Game(GameLevel9.class,9), "Level 9");
 					}
-					if(game.level == 9 ) {
+					if (game.level == 9 ) {
 						mainWindow = new Main(new Game(GameLevel10.class,10), "Level 10");
+					}
+					if (game.level == 10) {
+                        try {
+                            Process proc = Runtime.getRuntime().exec("java -jar game.jar");
+                            System.exit(0);
+                        } catch (Exception ex){
+                            ex.printStackTrace();
+                        }
+                        return;
 					}
 				} catch (InstantiationException e1) {
 					e1.printStackTrace();

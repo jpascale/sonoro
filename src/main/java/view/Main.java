@@ -16,7 +16,6 @@ public class Main extends JFrame {
 	
 	private Game game;
 	private MainPanel mainPanel;
-	// private OggClip ogg;
 	
 	public Main(Game game, String desc) {
 		super("My Desktop Dungeon - " + desc);
@@ -35,9 +34,6 @@ public class Main extends JFrame {
 
 		SoundMaker.getInstance().music(FX.MUSIC);
 		SoundMaker.getInstance().effect(FX.ENEMY);
-			// ogg = new OggClip(new FileInputStream("resources/map.ogg"));
-			// ogg.loop();
-
 	    
 	    addKeyListener(new KeyAdapter() {
 			public void keyPressed(KeyEvent e) {
