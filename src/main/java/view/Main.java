@@ -18,8 +18,8 @@ public class Main extends JFrame {
 	private MainPanel mainPanel;
 	// private OggClip ogg;
 	
-	public Main(Game game) {
-		super("My Desktop Dungeon");
+	public Main(Game game, String desc) {
+		super("My Desktop Dungeon - " + desc);
 		
 		this.game = game;
 		
@@ -34,6 +34,7 @@ public class Main extends JFrame {
 	    this.setIconImage(mainPanel.getImageManager().get("ICON"));
 
 		SoundMaker.getInstance().music(FX.MUSIC);
+		SoundMaker.getInstance().effect(FX.ENEMY);
 			// ogg = new OggClip(new FileInputStream("resources/map.ogg"));
 			// ogg.loop();
 

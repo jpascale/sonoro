@@ -81,6 +81,11 @@ public class GameLevel7 extends GameLevel{
         addGoblin(5,8,11);
         addGoblin(5,10,11);
 
+        addShield(2, 0, 1);
+        addSword(5, 1, 0);
+        addShield(3, 1, 1);
+        addSword(5, 1, 2);
+
 
     }
 

@@ -77,12 +77,18 @@ public class GameLevel6 extends GameLevel{
 
         addGoblin(5,0,11);
         addGoblin(5,2,11);
-        addGoblin(9,4,11);
+        addGoblin(5,4,11);
         addGoblin(5,6,11);
         addGoblin(5,8,11);
         addGoblin(5,10,11);
 
+        addShield(3, 9, 0);
+        addSword(5, 10, 0);
 
+        addHealthBonus(10,10,10);
+        addHealthBonus(10,10,9);
+        addHealthBonus(10,9,9);
+        addHealthBonus(10,0,9);
     }
 
     @Override

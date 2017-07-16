@@ -92,6 +92,13 @@ public class GameLevel5 extends GameLevel{
         addGoblin(3,7,8);
         addGoblin(3,9,8);
 
+        // add Bonuses
+        addShield(2, 1, 0);
+        addSword(5, 0, 1);
+        addShield(3, 1, 1);
+        addSword(5, 1, 2);
+
+
     }
 
     @Override

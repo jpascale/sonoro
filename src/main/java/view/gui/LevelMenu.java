@@ -52,7 +52,7 @@ public class LevelMenu extends JFrame {
 	        	  
 	        	  try {
                       SoundMaker.getInstance().effect(FX.CLICK);
-	        		  Main mainWindow = new Main(new Game(GameLevelY.class,1));
+	        		  Main mainWindow = new Main(new Game(GameLevelX.class,1), "Level 1");
 	        		  mainWindow.setVisible(true);
 	        	  } catch (InstantiationException | IllegalAccessException e) {
 	        		  JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
@@ -73,7 +73,7 @@ public class LevelMenu extends JFrame {
 	        	  
 	        	  try {
                       SoundMaker.getInstance().effect(FX.CLICK);
-	        		  Main mainWindow = new Main(new Game(GameLevelZ.class,2));
+	        		  Main mainWindow = new Main(new Game(GameLevelY.class,2), "Level 2");
 	        		  mainWindow.setVisible(true);
 	        	  } catch (InstantiationException | IllegalAccessException e) {
 	        		  JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
@@ -90,7 +90,7 @@ public class LevelMenu extends JFrame {
                 LevelMenu.this.ogg.stop();
                 try {
                     SoundMaker.getInstance().effect(FX.CLICK);
-                    Main mainWindow = new Main(new Game(GameLevelZ.class,3));
+                    Main mainWindow = new Main(new Game(GameLevelZ.class,3), "Level 3");
                     mainWindow.setVisible(true);
                 } catch (InstantiationException | IllegalAccessException e) {
                     JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
@@ -106,7 +106,7 @@ public class LevelMenu extends JFrame {
 				LevelMenu.this.ogg.stop();
 				try {
 					SoundMaker.getInstance().effect(FX.CLICK);
-					Main mainWindow = new Main(new Game(GameLevel4.class,4));
+					Main mainWindow = new Main(new Game(GameLevel4.class,4), "Level 4");
 					mainWindow.setVisible(true);
 				} catch (InstantiationException | IllegalAccessException e) {
 					JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
@@ -125,7 +125,7 @@ public class LevelMenu extends JFrame {
 
 				try {
 					SoundMaker.getInstance().effect(FX.CLICK);
-					Main mainWindow = new Main(new Game(GameLevel5.class,5));
+					Main mainWindow = new Main(new Game(GameLevel5.class,5), "Level 5");
 					mainWindow.setVisible(true);
 				} catch (InstantiationException | IllegalAccessException e) {
 					JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
@@ -145,7 +145,7 @@ public class LevelMenu extends JFrame {
 
 				try {
 					SoundMaker.getInstance().effect(FX.CLICK);
-					Main mainWindow = new Main(new Game(GameLevel6.class,6));
+					Main mainWindow = new Main(new Game(GameLevel6.class,6), "Level 6");
 					mainWindow.setVisible(true);
 				} catch (InstantiationException | IllegalAccessException e) {
 					JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
@@ -165,7 +165,7 @@ public class LevelMenu extends JFrame {
 
 				try {
 					SoundMaker.getInstance().effect(FX.CLICK);
-					Main mainWindow = new Main(new Game(GameLevel7.class,7));
+					Main mainWindow = new Main(new Game(GameLevel7.class,7), "Level 7");
 					mainWindow.setVisible(true);
 				} catch (InstantiationException | IllegalAccessException e) {
 					JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
@@ -185,7 +185,7 @@ public class LevelMenu extends JFrame {
 
 				try {
 					SoundMaker.getInstance().effect(FX.CLICK);
-					Main mainWindow = new Main(new Game(GameLevel8.class,8));
+					Main mainWindow = new Main(new Game(GameLevel8.class,8), "Level 8");
 					mainWindow.setVisible(true);
 				} catch (InstantiationException | IllegalAccessException e) {
 					JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
@@ -205,7 +205,7 @@ public class LevelMenu extends JFrame {
 
 				try {
 					SoundMaker.getInstance().effect(FX.CLICK);
-					Main mainWindow = new Main(new Game(GameLevel9.class,9));
+					Main mainWindow = new Main(new Game(GameLevel9.class,9), "Level 9");
 					mainWindow.setVisible(true);
 				} catch (InstantiationException | IllegalAccessException e) {
 					JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
@@ -225,7 +225,7 @@ public class LevelMenu extends JFrame {
 
 				try {
 					SoundMaker.getInstance().effect(FX.CLICK);
-					Main mainWindow = new Main(new Game(GameLevel10.class,10));
+					Main mainWindow = new Main(new Game(GameLevel10.class,10), "Level 10");
 					mainWindow.setVisible(true);
 				} catch (InstantiationException | IllegalAccessException e) {
 					JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
@@ -236,10 +236,10 @@ public class LevelMenu extends JFrame {
 
 
 
-        add(lb3);
+
 	    add(lb1);
 	    add(lb2);
-
+		add(lb3);
 		add(lb4);
 		add(lb5);
 		add(lb6);

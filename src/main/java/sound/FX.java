@@ -11,6 +11,7 @@ public enum FX {
     STEP_RIGHT("output_cubase/stepright.ogg"),
     USE_SWORD("output_cubase/usesword.ogg"),
     WIN("output_cubase/win.ogg"),
+    ENEMY("output_cubase/enemigofinal.ogg"),
     MUSIC("resources/map.ogg");
 
     private final String text;

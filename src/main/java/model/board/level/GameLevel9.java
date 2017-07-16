@@ -2,9 +2,6 @@ package model.board.level;
 
 import java.awt.*;
 
-/**
- * Created by kevinkraus on 7/10/17.
- */
 public class GameLevel9 extends GameLevel{
     @Override
     protected void setContents() {
@@ -13,8 +10,6 @@ public class GameLevel9 extends GameLevel{
         addGoblin(5,1,1);
         addGoblin(5,3,1);
         addGoblin(9,8,1);
-
-        addGoblin(5,2,11);
 
         addGoblin(8,0,3);
         addGoblin(5,2,3);
@@ -40,6 +35,10 @@ public class GameLevel9 extends GameLevel{
         addGoblin(1,7,10);
         addGoblin(1,10,10);
 
+        addShield(2, 0,1);
+        addSword(5, 0,2);
+        addShield(3, 1,0);
+        addSword(5, 2,0);
     }
 
     @Override

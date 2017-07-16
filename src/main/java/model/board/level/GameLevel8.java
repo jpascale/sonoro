@@ -83,7 +83,6 @@ public class GameLevel8 extends GameLevel{
         addWall(9,4);
 
         addGoblin(1,0,5);
-        addGoblin(1,0,5);
 
         addGoblin(1,11,1);
         addGoblin(3,11,5);
@@ -110,6 +109,11 @@ public class GameLevel8 extends GameLevel{
         addGoblin(4,4,4);
         addGoblin(8,4,7);
         addGoblin(6,4,9);
+
+        addShield(2, 0, 1);
+        addSword(5, 0, 2);
+        addShield(3, 1, 0);
+        addSword(5, 2, 0);
     }
 
     @Override

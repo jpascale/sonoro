@@ -39,7 +39,6 @@ public class MainMenu extends JFrame {
 			Image image = ImageIO.read(sourceimage);
 			this.setIconImage(image);
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 	    
@@ -54,7 +53,7 @@ public class MainMenu extends JFrame {
 	        	  MainMenu.this.ogg.stop();
 	        	  
 	        	  try {
-	        		  Main mainWindow = new Main(new Game(GameLevelX.class,1));
+	        		  Main mainWindow = new Main(new Game(GameLevelX.class,1), "Level 1");
 	        		  mainWindow.setVisible(true);
 	        	  } catch (InstantiationException | IllegalAccessException e) {
 	        		  JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
