@@ -10,14 +10,14 @@ public class History extends JFrame {
 
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
-        this.setSize(612, 493);
+        this.setSize(612, 235);
         this.setLocation(size.width/2 - getWidth()/2, size.height/2 - getHeight()/2);
         this.setResizable(false);
         getContentPane().setBackground(Color.BLACK);
         setLayout(null);
         JTextArea label = new Label(legend);
-        label.setBounds(0, 0, 612, 471);
-        label.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
+        label.setBounds(0, 0, 612, 190);
+        //label.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
 
         label.setEditable(false);
         label.setCursor(null);

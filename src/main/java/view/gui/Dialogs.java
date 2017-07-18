@@ -3,10 +3,10 @@ package view.gui;
 public enum Dialogs {
 
     JEDEN("Han atrapado a william wallace en el ultimo piso del castillo, lo tienen prisionero y llenaron la torre de goblins, golems y serpientes.\n" +
-            "podra el caballero matar a todos y liberar a su pueblo a tiempo?"),
+            "¿Podra el caballero matar a todos y liberar a su pueblo a tiempo?"),
     DWA("Muy bien William, este primer piso ha sido facil pero el arquitecto de este castillo lo construyo para evitar escapar. Ten en cuenta que hay medicina y espadas secretas escondidas en los alrededores de los pisos"),
-    TRZY("Nuestro guerrero parece sediento de sangre, no discrimina criatura alguna. Podra escapar del laberinto final?"),
-    CZTERY("William! William! Se empiezan a escuchar los gritos del pueblo que vienen por una ventana de la torre, saben que su heroe esta llegando, podra William escapar a tiempo?"),
+    TRZY("Nuestro guerrero parece sediento de sangre, no discrimina criatura alguna. ¿Podra escapar del laberinto final?"),
+    CZTERY("William! William! Se empiezan a escuchar los gritos del pueblo que vienen por una ventana de la torre, saben que su heroe esta llegando, ¿podra William escapar a tiempo?"),
     PIEC("El temor de los vikingos ha vuelto nuevamente, su espada no tiene perdon, su armadura ensangrentada parece reforzarse piso a piso"),
     SZESC("El elixir magico recuperara la vida de William, elige sabiamente cuando tomarlo"),
     SIEDEM("Se escuchan los gritos de los goblins, la leyenda ya esta corriendo en los distintos pisos, William ha vuelto!"),
