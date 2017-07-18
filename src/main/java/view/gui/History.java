@@ -15,11 +15,17 @@ public class History extends JFrame {
         this.setResizable(false);
         getContentPane().setBackground(Color.BLACK);
         setLayout(null);
-        JLabel label = new Label(legend);
-        label.setBounds(0, 0, 612, 470);
-        label.setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
-        label.setHorizontalAlignment(SwingConstants.LEFT);
-        label.setVerticalAlignment(SwingConstants.TOP);
+        JTextArea label = new Label(legend);
+        label.setBounds(0, 0, 612, 471);
+        label.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
+
+        label.setEditable(false);
+        label.setCursor(null);
+        label.setOpaque(false);
+        label.setFocusable(false);
+        label.setLineWrap(true);
+        label.setWrapStyleWord(true);
+        
         add(label);
     }
 }
