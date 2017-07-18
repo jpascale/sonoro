@@ -23,7 +23,7 @@ public class Golem implements Fighter {
 
 	@Override
 	public Content interact(Fighter hero) {
-		SoundMaker.getInstance().effect(FX.STAB);
+		SoundMaker.getInstance().effect(FX.STAB1);
 		injured(hero.getStrength());
 		hero.injured(getStrength());
 

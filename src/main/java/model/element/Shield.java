@@ -28,7 +28,7 @@ private int value;
 	@Override
 	public Content interact(Fighter hero) {
 		FighterHero fg = (FighterHero) hero;
-		SoundMaker.getInstance().effect(FX.USE_SWORD);
+		SoundMaker.getInstance().effect(FX.USE_SHIELD);
 		return new ShieldHero(fg, this);
 	}
 
