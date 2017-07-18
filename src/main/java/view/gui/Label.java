@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 
-public class Label extends JLabel {
+public class Label extends JTextArea {
 
     public Label(String legend) {
         super(legend);
