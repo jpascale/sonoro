@@ -16,7 +16,10 @@ public class History extends JFrame {
         getContentPane().setBackground(Color.BLACK);
         setLayout(null);
         JLabel label = new Label(legend);
-        label.setBounds(0, 0, 612, 493);
+        label.setBounds(0, 0, 612, 470);
+        label.setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
+        label.setHorizontalAlignment(SwingConstants.LEFT);
+        label.setVerticalAlignment(SwingConstants.TOP);
         add(label);
     }
 }
