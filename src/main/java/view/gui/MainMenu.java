@@ -54,7 +54,9 @@ public class MainMenu extends JFrame {
 	        	  
 	        	  try {
 	        		  Main mainWindow = new Main(new Game(GameLevelX.class,1), "Level 1");
-	        		  mainWindow.setVisible(true);
+                      mainWindow.setVisible(true);
+                      History h = new History(Dialogs.JEDEN.toString());
+                      h.setVisible(true);
 	        	  } catch (InstantiationException | IllegalAccessException e) {
 	        		  JOptionPane.showMessageDialog(null, "Error al cargar datos del nivel", "Error", JOptionPane.ERROR_MESSAGE);
 	        	  }

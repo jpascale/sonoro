@@ -33,34 +33,44 @@ public class PlayerWin extends JFrame {
 			{
 
 				Main mainWindow = null;
+				Dialogs legend = null;
 				try {
 
 					if (game.level == 1 ) {
 						mainWindow = new Main(new Game(GameLevelY.class,2), "Level 2");
+						legend = Dialogs.DWA;
 					}
 					if (game.level  == 2 ) {
 						mainWindow = new Main(new Game(GameLevelZ.class,3), "Level 3");
+						legend = Dialogs.TRZY;
 					}
 					if (game.level == 3 ) {
 						mainWindow = new Main(new Game(GameLevel4.class,4), "Level 4");
+						legend = Dialogs.CZTERY;
 					}
 					if (game.level  == 4 ) {
 						mainWindow = new Main(new Game(GameLevel5.class,5), "Level 5");
+						legend = Dialogs.PIEC;
 					}
 					if (game.level  == 5 ) {
 						mainWindow = new Main(new Game(GameLevel6.class,6), "Level 6");
+						legend = Dialogs.SZESC;
 					}
 					if (game.level  == 6 ) {
 						mainWindow = new Main(new Game(GameLevel7.class,7), "Level 7");
+						legend = Dialogs.SIEDEM;
 					}
 					if (game.level  == 7 ) {
 						mainWindow = new Main(new Game(GameLevel8.class,8), "Level 8");
+						legend = Dialogs.OSIEM;
 					}
 					if (game.level == 8 ) {
 						mainWindow = new Main(new Game(GameLevel9.class,9), "Level 9");
+						legend = Dialogs.DZIEWIEC;
 					}
 					if (game.level == 9 ) {
 						mainWindow = new Main(new Game(GameLevel10.class,10), "Level 10");
+						legend = Dialogs.DZIESIEC;
 					}
 					if (game.level == 10) {
                         try {
@@ -77,6 +87,11 @@ public class PlayerWin extends JFrame {
 					e1.printStackTrace();
 				}
 				mainWindow.setVisible(true);
+				if (legend != null) {
+					History h = new History(legend.toString());
+					h.setVisible(true);
+				}
+
 			}
 		});
 
